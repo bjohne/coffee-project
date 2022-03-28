@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colombian Coffee</title>
+  </head>
+  <style>
+    body {
+      background-color: rgba(226, 222, 211, 0.5);
+    }
+    h1 {
+      text-align: center;
+      color: #ff6d24;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 32px;
+    }
+    h2 {
+      text-align: center;
+      background-color: #e2ded3;
+      border-radius: 4px;
+    }
+    img {
+      margin: 30px;
+      border-radius: 4px;
+      display: block;
+      margin: 0 auto;
+    }
+    p {
+      font-family: Tahoma, sans-serif;
+      text-align: justify;
+      color: #4e413b;
+      padding: 25px;
+      line-height: 1.2;
+      margin-top: 0ex;
+      margin-bottom: 0;
+    }
+    a {
+      display: block;
+      margin: 0px 50px 20px 25px;
+      text-decoration: none;
+      font-family: Tahoma, sans-serif;
+      font-size: 15px;
+      color: #857671;
+    }
+
+    button {
+      display: block;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid rgba(133, 118, 113, 0.3);
+      border-radius: 25px;
+      font-size: 17px;
+      color: #ff6d24;
+      font-weight: bolder;
+      background-color: rgba(133, 118, 113, 0.3);
+      cursor: pointer;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+      transition: all 150ms ease-in-out;
+    }
+    button:hover {
+      background-color: rgba(255, 109, 36, 0.3);
+      border-color: #ff6d24;
+    }
+    footer {
+      font-size: 12px;
+      font-family: monospace;
+      font-weight: narrower;
+    }
+
+    .moreInfo:hover {
+      color: #ff6d24;
+
+      padding: 10px 5px 10px 5px;
+      border-radius: 4px;
+    }
+
+    .h2part1 {
+      color: #857671;
+    }
+    .h2part2 {
+      color: #4e413b;
+    }
+    .infoFnc {
+      display: inline;
+      margin: 0 0 0 0;
+    }
+    .infoFnc:hover {
+      color: rgba(255, 109, 36, 0.8);
+    }
+    .container {
+      max-width: 650px;
+      margin: 0 auto;
+      margin-top: 50px;
+      padding: 25px;
+      background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>Colombian Coffee</h1>
+      <h2>
+        <span class="h2part1"> Imagine the scent </span>
+        <span class="h2part2"> of delicious coffee ☕ </span>
+      </h2>
+      <br />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/628/original/pexels-couleur-2316554_d.jpg?1637827312"
+        alt="coffeebeans"
+        width="300px"
+      />
+      <p>
+        In Colombia mild and well-balanced coffee beans are produced. Most of
+        the coffee is grown in Colombia's coffee zone also known as Colombian
+        coffee triangle with cities like Manizales and smaller locations like
+        the picturesque Salento. You can visit some producers and get a guided
+        tour on their coffee farm with the possibility of tasting coffee at the
+        end of your visit. Some of them offer accomodation for a longer stay.
+
+        <br /><br />
+
+        <span
+          >The
+          <a
+            href="https://federaciondecafeteros.org/wp/federation/?lang=en"
+            target="_blank"
+            class="infoFnc"
+          >
+            <em>
+              <strong> Federación nacional de cafeteros de Colombia</strong>
+            </em></a
+          >
+          (FNC) offers a lot of information about Colombian coffee.
+        </span>
+      </p>
+
+      <a
+        href="https://www.colombia.co/en/trade-with-colombia/exports/colombian-coffee-worlds-favorite/"
+        target="_blank"
+      >
+        <span class="moreInfo">
+          👉🏼... and more information about Colombian Coffee
+        </span>
+      </a>
+
+      <br />
+
+      <button>Book a trip to the coffee zone</button><br /><br /><br />
+      <hr />
+      <br />
+      <footer>This page was built by Betina Johne</footer>
+    </div>
+
+    <script>
+      function bookTrip() {
+        let firstName = prompt("What is your first name?");
+        let mailAdress = prompt("What is you emailadress?");
+        let age = prompt(
+          "How old are you? Just to check, if you can book 😉..."
+        );
+
+        if (age >= 18) {
+          alert(
+            "Hi " +
+              firstName +
+              ", thank you for your interest 😊! We'll contact you."
+          );
+        } else {
+          alert(
+            "Hi " +
+              firstName +
+              ", thank you for your interest! Unfortunately you are too young to book a trip 🙁."
+          );
+        }
+      }
+      let button = document.querySelector("button");
+      button.addEventListener("click", bookTrip);
+    </script>
+  </body>
+</html>
